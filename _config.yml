@@ -130,8 +130,8 @@ comments:
     clientID    : e996729ddd6fe6f33ede # GitHub Application Client ID
     clientSecret: 658d693fad3f2670b447461f0863a0d9c468764f # GitHub Application Client Secret
     repository  : blog-comments # GitHub repo
-    owner       : Yudonggeun # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    owner       : yudonggeun # GitHub repo owner
+    admin: yudonggeun # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine
