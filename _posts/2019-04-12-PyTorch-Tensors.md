@@ -13,7 +13,6 @@ from __future__ import print_function
 import torch
 ```
 
-  
 
 초기화 되지 않은 5x3 행렬 생성
 
@@ -31,6 +30,7 @@ tensor([[0., 0., 0.],
         [0., 0., 0.],
         [0., 0., 0.]])
 ```
+
 
   
 
