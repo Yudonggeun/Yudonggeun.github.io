@@ -4,7 +4,7 @@ tags: 강화학습
 key: page-Start-StarCraft2
 ---
 
-![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2018/11/a.jpeg)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2018/13/a.jpeg)
 
 
 ## 스타크래프트 II
