@@ -9,7 +9,7 @@ DeepMind에서 개발한 Python 라이브러리 PySC2를 사용합니다.
 
 ## 스타크래프트 II 설치
 ##### Linux
-블리자드 [문서](https://github.com/Blizzard/s2client-proto#downloads)에서 Linux 버전의 스타크래프트 2를 설치합니다. PySC2에서는 '''~/StarCraftII/''' 경로에 있기를 원합니다. '''SC2PATH''' 환경 설정을 하거나 고유한 run_config을 작성하여 이를 대체할 수 있습니다.
+블리자드 [문서](https://github.com/Blizzard/s2client-proto#downloads)에서 Linux 버전의 스타크래프트 2를 설치합니다. PySC2에서는 `~/StarCraftII/` 경로에 있기를 원합니다. `SC2PATH` 환경 설정을 하거나 고유한 run_config을 작성하여 이를 대체할 수 있습니다.
 
 
 
@@ -18,7 +18,7 @@ DeepMind에서 개발한 Python 라이브러리 PySC2를 사용합니다.
 
 
 ##맵 설정
-PySC2에서는 학습을 위한 [mini game](https://github.com/deepmind/pysc2/releases/download/v1.2/mini_games.zip) 맵을 제공하고 있습니다. 또한 1대1 경기를 위한 [ladder maps](ladder maps)을 제공하고 있습니다. 맵을 다운 받은 후 '''StarcraftII/Maps/'''경로에 이동시키면 됩니다.
+PySC2에서는 학습을 위한 [mini game](https://github.com/deepmind/pysc2/releases/download/v1.2/mini_games.zip) 맵을 제공하고 있습니다. 또한 1대1 경기를 위한 [ladder maps](ladder maps)을 제공하고 있습니다. 맵을 다운 받은 후 `StarcraftII/Maps/`경로에 이동시키면 됩니다.
 
 랜덤으로 기본 Agent를 실행해줍니다:
 ~~~
@@ -48,7 +48,7 @@ $ python -m pysc2.bin.run_test
 $ python -m pysc2.bin.play --map Simple64
 ~~~
 
-UI에서 '''?'''를 입력하면 hotkeys 리스트를 확인 할 수 있습니다.
+UI에서 `?`를 입력하면 hotkeys 리스트를 확인 할 수 있습니다.
 
 단축키
 - F4: 종료
@@ -71,7 +71,7 @@ $ python -m pysc2.bin.play --replay <path-to-replay>
 - F4: 종료
 - pgup/pgdn: 속도 조절
 
-'''— video flag'''를 사용하면 리플레이를 동영상으로 저장할 수 있습니다.
+`— video flag`를 사용하면 리플레이를 동영상으로 저장할 수 있습니다.
 
 
 ## 자세한 환경설정
