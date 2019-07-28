@@ -1,7 +1,7 @@
 ---
 title: 스타크래프트 II 알아보기.
 tags: 강화학습
-key: page-start-starcraft
+key: page-Start-StarCraft2
 ---
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2018/11/a.jpeg)
