@@ -263,7 +263,7 @@ Best val Acc: 0.921569
 visualize_model(model_tf)
 ```
 
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/16/.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/16/b.png)
 
 ### ConvNet as fixed feature extractor
 
