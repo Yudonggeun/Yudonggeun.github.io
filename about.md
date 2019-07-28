@@ -7,6 +7,8 @@ aside:
 key: page-about
 ---
 
+<br/>
+
 ## 소개
 
 - 이름: 유동근
