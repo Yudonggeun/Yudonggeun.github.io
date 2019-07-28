@@ -1,19 +1,19 @@
 ---
-title: Post with Header Image
-tags: TeXt
-article_header:
-  type: cover
-  image:
-    src: /images/2018/11/a.jpg
+title: 스타크래프트 II 알아보기.
+tags: 강화학습
+key: page-start-starcraft
 ---
-![](https://github.com/Yudonggeun/yudonggeun.github.io//images/2018/11/a.jpg)
 
-## 스타크래프트2
-스타크래프트 2는 블리자드에서 개발한 RTS(Real-Time-Strategy) 게임입니다. 가장 성공한 RTS게임중 하나이고 전 세계 수 천만명이 즐기는 게임입니다.
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2018/11/a.jpeg)
+
+
+## 스타크래프트 II
+스타크래프트는 블리자드에서 개발한 RTS(Real-Time-Strategy) 게임입니다. 가장 성공한 RTS게임중 하나이고 전 세계 수 천만명이 즐기는 게임입니다.
 
 스타크래프트의 목표는 기지 건설, 경제 관리, 유닛 생산 그리고 적을 파괴하는 것입니다. 유닛을 컨트롤 잘 하는 것이 승리에 크게 기여합니다. 유닛을 얼마나 잘 활용하느냐가 게임에서 가장 중요한 요소입니다.
 
 스타크래프트 2는 테란(Terran), 프로토스(Protoss), 저그(Zerg) 3개의 종족이 존재합니다.
+
 
 ## 게임 속도
 스타크래프트2는 게임과 현실의 실제 시간이 다르다. 게임 내에서 시뮬레이션 속도가 게임 속도에 따라 초당 16~22번 업데이트 됩니다. [게임 속도](https://liquipedia.net/starcraft2/Game_Speed)
@@ -31,6 +31,7 @@ Effective Actions Per Minute (EPM): 영향이 없는 행동을 필터링 한다.
 - 스마트 = 1 (우측 클릭)
 - 선택과 그룹 컨트롤 = 1
 - 나머지 = 0 (카메라 이동)
+
 
 ## 자동 타겟팅
 유닛이 자동으로 타겟팅을 결정할 때 무기 스캔 거리, 위협 및 지원을 기반으로 합니다. 유닛은 무기가 있는 적을 없는 것 보다 높은 위협으로 간주하고, 우선 순위가 높은 유닛부터 공격합니다. 미사일 터렛 대 해병인 경우 마사일 터렛은 해병을 공격을 하지 않기 때문에 해병의 우선 순위에서 미사일 터렛은 낮은 우선 순위를 보입니다. 그러나 미사일 터렛이 의료선을 공격할 경우 미사일 터렛의 우선순위는 높아집니다. 2개의 타겟이 같은 우선 순위를 가지는 경우, 가장 가까운 타겟이 선택됩니다.
