@@ -18,6 +18,7 @@ Test.py 파일을 열고 38 줄에서 숫자 옆 빈공간을 누르게 되면 �
 ![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2018/18/c.png)
 
 observation을 펼쳐보면:
+
 ![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2018/18/d.png)
 
 이와 같이 17개 종류가 나온다. 예를 들어 single_select를 펼져보면:
