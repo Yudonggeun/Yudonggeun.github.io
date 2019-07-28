@@ -1,7 +1,7 @@
 ---
-title: 스타크래프트 II 알아보기.
+title: 스타크래프트 2 강화학습 개발환경 설정
 tags: 강화학습
-key: page-start-starcraft
+key: page-StarCraft2-Reinforcment-Learning-Development-Environment
 ---
 
 ## PySC2 설치
