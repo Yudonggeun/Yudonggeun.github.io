@@ -1,14 +1,14 @@
 ---
 title: PyTorch Autograd
-tags: 강화학습
+tags: PyTorch
 key: page-PyTorch-Autograd
 ---
 
-### AUTOGRAD
+## AUTOGRAD
 
 PyTorch의 모든 신경 네트워크의 중심은 autograd package입니다. autograd package는 Tensors의 작동에 대하여 자동 미분해줍니다. 이것은 define-by-run framework이며, 즉 코드가 실행되는 방식에 따라 backprop이 정의 되고 매번 바뀐다.
 
-#### Tensor
+## Tensor
 
 torch.Tensor는 패키지의 중심 class입니다. `.requires_grad`를 True로 설정한다면 모든 작업을 추적하기 시작합니다. 계산이 끝나고 `.backward()`를 호출하면 모든 gradients를 자동으로 계산해줍니다. gradient는 tensor의 `.grad`에 쌓이게 될 것입니다.
 
@@ -103,7 +103,7 @@ True
 <SumBackward0 object at 0x7f8033c4dfd0>
 ```
 
-#### Gradients
+## Gradients
 
 backprop 시작. `out`가 single scalar를 포함하고 있다면 `out.backward()`는 `out.backward(torch.tensor(1,))`와 동일합니다.
 

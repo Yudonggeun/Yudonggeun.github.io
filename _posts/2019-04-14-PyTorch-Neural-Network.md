@@ -11,7 +11,7 @@ nn은 모델을 정의하고 차별화하기 위해 autograd에 의존합니다.
 
 다음 이미지를 구별하는 network를 보자:
 
-[##_Image|kage@O3KXZ/btquj1RUIoo/JHmPERsgXTHFuRwcDO5BKk/img.png|alignCenter|data-filename="mnist.png"|ConvNet_##]
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/14/a.png)
 
 이것은 simple feed-forward network이다. 입력을 받아 여러 layer를 차례로 통과한 다음 최종적으로 값을 출력해준다.
 

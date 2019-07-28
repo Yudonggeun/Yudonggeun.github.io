@@ -4,7 +4,7 @@ tags: PyTorch
 key: page-PyTorch Tensors
 ---
 
-#### Tensors
+## Tensors
 
 Tensors는 NumPy의 ndarrays와 유사하며 Tensors를 GPU에서도 사용할 수 있다.
 
@@ -85,7 +85,7 @@ Out:
 tensor([5.5000, 3.0000])
 ```
 
-#### Operations
+### Operations
 
 Tensors를 다양한 방법으로 연산을 할 수 있습니다.
 
@@ -212,7 +212,7 @@ tensor([1.3589])
 1.3589212894439697
 ```
 
-#### NumPy Array to Torch Tensor
+### NumPy Array to Torch Tensor
 
 tensor를 numPy 형식으로 변환 할 수 있습니다.
 
@@ -231,7 +231,7 @@ Out:
 tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
 ```
 
-#### CUDA Tensors
+### CUDA Tensors
 
 Tensors를 .to 메소드를 이용해서 다른 디바이스로 옮길 수 있습니다.
 
