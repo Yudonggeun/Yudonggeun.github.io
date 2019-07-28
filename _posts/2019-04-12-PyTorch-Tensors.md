@@ -1,34 +1,258 @@
 ---
-title: PySC2 Agent에 reward 사용하기
-tags: 강화학습
-key: page-Use-Reward-in-PySC2-Agent
+title: PyTorch Tensors
+tags: PyTorch
+key: page-PyTorch Tensors
 ---
 
-#### PyTorch란?
+#### Tensors
 
-사실 우리가 흔하게(?) 접하는 프로그래밍 언어는 Dynamic이다. 그냥 변수 선언 하고 출력하면 바로 값이 출력된다. 하지만 TensorFlow를 포함한 몇몇의 Deep Learning Library들은 Graph라는 것을 설계한 후에 Graph 내에서 작동한다. 구조를 바꾸려면 Graph부터 다시 설계해야 한다는 것이다. 그래서 TensorFlow를 사용해봤던 유저라면 tf.Session()을 알 것이다. 그러나 PyTorch는 다르다. PyTorch에게 가장 잘 어울리는 단어는 'Dynamic'이다. 일반 프로그래밍 처럼 동적이라는 것이다. Graph 구조를 자주 바꿔야 되는 연구나 실험을 할때 주로 PyTorch를 사용한다.
+Tensors는 NumPy의 ndarrays와 유사하며 Tensors를 GPU에서도 사용할 수 있다.
 
-#### PyTorch와 TensorFlow 비교
+```
+from __future__ import print_function
+import torch
+```
 
-| 구분 | TensorFlow | PyTorch |
-| :-: | :-: | :-: |
-| 패러다임 | Define and Run | Define by Run |
-| 그래프 형태 | Static graph | Dynamic graph |
+  
 
-#### PyTorch 단점
+초기화 되지 않은 5x3 행렬 생성
 
-1.  문서화가 잘 안되었다.
-2.  협소한 사용자 커뮤니티.
-3.  상용이 아니라 연구용으로 적합.
+```
+x = torch.empty(5, 3)
+print(x)
+```
 
-#### PyTorch 패키지
+Out:
 
-| 패키지 | 기술 |
-| :-: | :-: |
-| torch | 강력한 GPU 지원 기능을 갖춘 Numpy와 같은 Tensor 라이브러리 |
-| torch.autograd | Torch에서 모든 차별화된 Tensor 작업을 지원하는 테이프 기반 자동 차별화 라이브러리 |
-| torch.nn | 최고의 유연성을 위해 설계된 자동 그래프와 깊이 통합된 신경 네트워크 라이브러리 |
-| torch.optim | SGD, RMSProp, LBFGS, Adam 등과 같은 표준 최적화 방법으로 torch.nn과 함께 사용되는 최적화 패키지 |
-| torch.multiprocessing | 파이썬 멀티 프로세싱을 지원하지만, 프로세스 전반에 걸쳐 Torch Tensors의 마법같은 메모리 공유 기능을 제공. 데이터 로딩 및 호그 워트 훈련에 유용. |
-| torch.utils | 편의를 위해 DataLoader, Trainer 및 기타 유틸리티 기능 |
-| torch.legacy(.nn/optim) | 이전 버전과의 호환성을 위해 Torch에서 이식된 레거시 코드 |
+```
+tensor([[0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.]])
+```
+
+  
+
+랜덤으로 초기화 된 행렬을 만든다.
+
+```
+x = torch.rand(5, 4)
+print(x)
+```
+
+Out:
+
+```
+tensor([[0.8541, 0.3420, 0.8181, 0.5187],
+        [0.0324, 0.0796, 0.6898, 0.1944],
+        [0.3299, 0.1840, 0.0843, 0.1516],
+        [0.4275, 0.6507, 0.5878, 0.1182],
+        [0.7116, 0.0855, 0.8491, 0.1673]])
+```
+
+  
+
+행렬을 dtype long의 0으로 채운다.
+
+```
+x = torch.zeros(5, 3, dtype=torch.long)
+print(x)
+```
+
+Out:
+
+```
+tensor([[0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]])
+```
+
+  
+
+텐서에 데이터를 직접 넣을 수 있습니다.
+
+```
+x = torch.tensor([5.5, 3])
+print(x)
+```
+
+Out:
+
+```
+tensor([5.5000, 3.0000])
+```
+
+#### Operations
+
+Tensors를 다양한 방법으로 연산을 할 수 있습니다.
+
+  
+
+방법 1:
+
+```
+x = torch.zeros(5, 4)
+y = torch.ones(5, 4)
+print(x + y)
+```
+
+Out:
+
+```
+tensor([[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]])
+```
+
+  
+
+방법 2:
+
+```
+x = torch.zeros(5, 4)
+y = torch.ones(5, 4)
+print(torch.add(x, y))
+```
+
+Out:
+
+```
+tensor([[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]])
+```
+
+  
+
+출력 텐서를 인수로 제공할 수 있습니다.
+
+```
+x = torch.zeros(5, 4)
+y = torch.ones(5, 4)
+result = torch.empty(5, 4)
+torch.add(x, y, out=result)
+print(result)
+```
+
+Out:
+
+```
+tensor([[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]])
+```
+
+  
+
+행열 연산해서 행열에 추가하기
+
+```
+x = torch.zeros(5, 4)
+y = torch.ones(5, 4)
+y.add_(x)
+print(result)
+```
+
+Out:
+
+```
+tensor([[1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.],
+        [1., 1., 1., 1.]])
+```
+
+  
+
+행렬에서 색인을 생성할 수 있습니다.
+
+```
+x = torch.ones(5, 4) print(x\[:, 1\])
+```
+
+Out:
+
+```
+tensor(\[-0.4377, 0.1942, 0.2410, 0.5899, 0.2724\])
+```
+
+```
+x = torch.randn(4, 4) y = x.view(16) z = x.view(-1, 8) # -1은 행렬 사이즈에 맞춰서 변경됩니다.
+print(x.size(), y.size(), z.size())
+```
+
+Out:
+
+```
+torch.Size([4, 4]) torch.Size([16]) torch.Size([2, 8])
+```
+
+  
+
+tensor가 하나의 요소만 가지고 있을 때 .item()으로 파이썬 숫자 값을 얻을 수 있습니다.
+
+```
+x = torch.randn(1) print(x) print(x.item())
+```
+
+Out:
+
+```
+tensor([1.3589])
+1.3589212894439697
+```
+
+#### NumPy Array to Torch Tensor
+
+tensor를 numPy 형식으로 변환 할 수 있습니다.
+
+```
+a = np.ones(5)
+b = torch.from_numpy(a)
+np.add(a, 1, out=a)
+print(a)
+print(b)
+```
+
+Out:
+
+```
+[2. 2. 2. 2. 2.]
+tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
+```
+
+#### CUDA Tensors
+
+Tensors를 .to 메소드를 이용해서 다른 디바이스로 옮길 수 있습니다.
+
+```
+# GPU가 있어야함.
+if torch.cuda.is_available():
+  device = torch.device("cuda")
+  y = torch.ones_like(x, device=device)
+  print(y)
+  x = x.to(device)
+  print(x)
+  z = x + y
+  print(z)
+  print(z.to("cpu", torch.double))
+```
+
+Out:
+
+```
+tensor([1.], device='cuda:0')
+tensor([0.6489], device='cuda:0')
+tensor([1.6489], device='cuda:0')
+tensor([1.6489], dtype=torch.float64)
+```

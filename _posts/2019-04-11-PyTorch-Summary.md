@@ -1,7 +1,7 @@
 ---
-title: PySC2 Agent에 reward 사용하기
-tags: 강화학습
-key: page-Use-Reward-in-PySC2-Agent
+title: PyTorch Summary
+tags: PyTorch
+key: page-PyTorch-Summary
 ---
 
 #### PyTorch란?
@@ -17,9 +17,9 @@ key: page-Use-Reward-in-PySC2-Agent
 
 #### PyTorch 단점
 
-1.  문서화가 잘 안되었다.
-2.  협소한 사용자 커뮤니티.
-3.  상용이 아니라 연구용으로 적합.
+1. 문서화가 잘 안되었다.
+2. 협소한 사용자 커뮤니티.
+3. 상용이 아니라 연구용으로 적합.
 
 #### PyTorch 패키지
 
