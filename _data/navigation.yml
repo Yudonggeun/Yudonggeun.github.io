@@ -17,6 +17,23 @@ header:
     url: /archive.html
 
   - titles:
+      en      : &EN       Math
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       Math
+      ko-KR   : *KO
+    url: /math.html
+
+  - titles:
       en      : &EN       Series
       en-GB   : *EN
       en-US   : *EN
