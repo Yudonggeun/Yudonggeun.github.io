@@ -1,9 +1,8 @@
 ---
 layout: article
 title: Page - Sidebar (Aside)
-permalink: /page/sidebar-aside.html
 key: page-sidebar-aside
-cover: /docs/assets/images/axure/page-sidebar-aside.jpg
+
 aside:
   toc: true
 sidebar:
