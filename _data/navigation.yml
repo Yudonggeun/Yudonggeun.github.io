@@ -17,7 +17,7 @@ header:
     url: /archive.html
 
   - titles:
-      en      : &EN       Math.
+      en      : &EN       Math
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -29,7 +29,7 @@ header:
       zh-Hant : &ZH_HANT  
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       Math.
+      ko      : &KO       Math
       ko-KR   : *KO
     url: /math/start-math.html
 
@@ -76,5 +76,7 @@ layouts:
         url:    /math/mathematical-symbols.html
   - title: Linear Algebra
     children:
-      - title:  
-        url:    /math/start-math.html
+      - title:  Start Linear Algebra
+        url:    /math/linear-algebra.html
+      - title:  Vectors and Spaces
+        url:    /math/vectors-and-spaces.html
