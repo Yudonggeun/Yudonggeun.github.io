@@ -12,12 +12,12 @@ key: page-Series
 - 설명: PyTorch 공식 튜토리얼 공부.
 - 기간: 2019.4.11~2019.4.23
 
-1. [PyTorch Summary](https://blog.donggeun.net/57)
-2. [PyTorch Tensors](https://blog.donggeun.net/58)
-3. [PyTorch autograd](https://blog.donggeun.net/59)
-4. [PyTorch Neural Network](https://blog.donggeun.net/60)
-5. [PyTorch 이미지 분류 만들기](https://blog.donggeun.net/61)
-6. [PyTorch Transfer Learning](https://blog.donggeun.net/62)
+1. [PyTorch Summary](https://yudonggeun.github.io/2019/04/11/PyTorch-Summary.html)
+2. [PyTorch Tensors](https://yudonggeun.github.io/2019/04/12/PyTorch-Tensors.html)
+3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
+4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
+5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
+6. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
 
 ### PySC2
 
