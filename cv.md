@@ -99,4 +99,4 @@ Tooling/DepOps
 - 기간: 2018.7.15~2018.7.31
 - 개발 인원: 1
 - 참여 비율: 100%
-- GitHub: [Face_Recognition](
+- GitHub: [Face_Recognition](https://github.com/Yudonggeun/FaceRecognitionWithCNN)
