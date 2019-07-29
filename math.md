@@ -1,10 +1,10 @@
 ---
 layout: article
-titles: CV
-key: page-CV
+titles: CVA
+key: page-AA
 aside:
   toc: true
-key: page-about
+key: page-aboutA
 ---
 
 <br/>
