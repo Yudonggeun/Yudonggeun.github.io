@@ -17,7 +17,7 @@ header:
     url: /archive.html
 
   - titles:
-      en      : &EN       Math
+      en      : &EN       Math.
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -29,9 +29,9 @@ header:
       zh-Hant : &ZH_HANT  
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       Math
+      ko      : &KO       Math.
       ko-KR   : *KO
-    url: /start-math.html
+    url: /math/start-math.html
 
   - titles:
       en      : &EN       Series
@@ -71,10 +71,10 @@ Layout_math:
   - title: Math
     children:
       - title:  Start Math
-        url:    /page/start-math.html
+        url:    /math/start-math.html
       - title:  Mathematical
-        url:    /page/mathematical-symbols.html
+        url:    /math/mathematical-symbols.html
   - title: Linear Algebra
     children:
       - title:  
-        url:    /page/start-math.html
+        url:    /math/start-math.html
