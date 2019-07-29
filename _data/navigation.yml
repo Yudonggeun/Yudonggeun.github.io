@@ -17,7 +17,7 @@ header:
     url: /archive.html
 
   - titles:
-      en      : &EN       Sires
+      en      : &EN       Series
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -29,9 +29,9 @@ header:
       zh-Hant : &ZH_HANT  
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       Sires
+      ko      : &KO       Series
       ko-KR   : *KO
-    url: /sires.html
+    url: /series.html
 
   - titles:
       en      : &EN       CV
