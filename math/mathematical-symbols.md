@@ -7,7 +7,7 @@ permalink: /math/mathematical-symbols.html
 aside:
   toc: true
 sidebar:
-  nav: layout_math
+  nav: layouts
 ---
 
 # 수학 기호

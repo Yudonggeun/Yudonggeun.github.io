@@ -7,7 +7,7 @@ permalink: /math/start-math.html
 aside:
   toc: true
 sidebar:
-  nav: layout_math
+  nav: layouts
 ---
 
 # 수학 공부
