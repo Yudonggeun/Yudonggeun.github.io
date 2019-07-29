@@ -10,7 +10,7 @@ sidebar:
   nav: layouts
 ---
 
-A post with a left sidebar.
+A post with a left sidebar..
 
 <!--more-->
 
