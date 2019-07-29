@@ -67,7 +67,7 @@ header:
       ko-KR   : *KO
     url: /cv.html
 
-Layout_math:
+layout_math:
   - title: Math
     children:
       - title:  Start Math
