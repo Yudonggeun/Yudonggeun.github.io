@@ -6,8 +6,12 @@
 {%- assign _mathjax_autoNumber = __return -%}
 
 <script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-	});
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+	var _config = { tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+	}};
+	{%- if _mathjax_autoNumber == true -%}
+		_config.TeX = { equationNumbers: { autoNumber: "all" } };
+	{%- endif -%}
+	MathJax.Hub.Config(_config);
+</script>
+<script type="text/javascript" src="{{ _sources.mathjax }}" async></script>
