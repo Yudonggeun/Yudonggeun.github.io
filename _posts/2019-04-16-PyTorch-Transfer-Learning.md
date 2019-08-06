@@ -104,7 +104,7 @@ out = torchvision.utils.make_grid(inputs)
 imshow(out, title=[class_names[x] for x in classes])
 ```
 
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/16/a.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/04/16/a.png)
 
 ### Training the model
 
@@ -263,7 +263,7 @@ Best val Acc: 0.921569
 visualize_model(model_tf)
 ```
 
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/16/b.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/0416/b.png)
 
 ### ConvNet as fixed feature extractor
 
@@ -322,4 +322,4 @@ plt.ioff()
 plt.show()
 ```
 
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/16/c.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/04/16/c.png)

@@ -22,7 +22,7 @@ key: page-PyTorch-Image-Classification
 
 이번 튜토리얼에서는 CIFAR10 dataset을 사용할 것 입니다. 비행기, 자동차, 새, 고양이, 사슴, 개, 개구리, 말, 배, 트럭 class를 가지고 있다. CIFAR-10의 이미지 크기는 3x32x32입니다. 즉, 크기가 32x32 픽셀이고 3채널 컬러 이미지입니다.
 
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/15/a.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2019/04/15/a.png)
 
 ### Traning an image classifier
 

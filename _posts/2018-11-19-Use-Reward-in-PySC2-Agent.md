@@ -455,7 +455,7 @@ python -m pysc2.bin.agent —-map Simple64 --agent reward.SparseAgent —-agent_
 ~~~
 
 1035 게임을 한 후의 결과이다:
-![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2018/19/a.png)
+![](https://raw.githubusercontent.com/Yudonggeun/yudonggeun.github.io/master/images/2018/11/19/a.png)
 
 기본 설정을 사용하는 Agent가 50% 미만으로 패배하는 것에 감명을 받았습니다. 다음 튜토리얼에서는 승률 70%로 증가시킬 것입니다.
 
