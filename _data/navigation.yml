@@ -82,4 +82,5 @@ layouts:
         url:    /math/vectors.html
       - title:  Linear combinations and spans
         url:    /math/linear-combinations-and-spans.html
-        
+      - title:  Linear dependence and independence
+        url:    /math/linear-dependence-and-independence.html
