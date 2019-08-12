@@ -78,7 +78,5 @@ layouts:
     children:
       - title:  Start Linear Algebra
         url:    /math/linear-algebra.html
-      - title: Vector
-        children:
-          - title:  Vectors and Spaces
-            url:    /math/vectors-and-spaces.html
+      - title:  Vectors
+        url:    /math/vectors.html
