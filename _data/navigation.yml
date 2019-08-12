@@ -88,3 +88,5 @@ layouts:
         url:    /math/subspaces-and-the-basis-for-a-subspace.html
       - title:  Vector dot and cross products
         url:    /math/vector-dot-and-cross-products.html
+      - title:  Null space and column space
+        url:    /math/null-space-and-column-space.html
