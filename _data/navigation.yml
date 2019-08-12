@@ -80,6 +80,6 @@ layouts:
         url:    /math/linear-algebra.html
       - title:  Vectors
         url:    /math/vectors.html
-      - title:  Vectors
+      - title:  Linear combinations and spans
         url:    /math/linear-combinations-and-spans.html
         
