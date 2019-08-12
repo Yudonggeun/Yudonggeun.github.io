@@ -86,3 +86,5 @@ layouts:
         url:    /math/linear-dependence-and-independence.html
       - title:  Subspaces and the basis for a subspace
         url:    /math/subspaces-and-the-basis-for-a-subspace.html
+      - title:  Vector dot and cross products
+        url:    /math/vector-dot-and-cross-products.html
