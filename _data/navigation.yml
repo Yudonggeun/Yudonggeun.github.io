@@ -74,10 +74,10 @@ layouts:
         url:    /math/start-math.html
       - title:  Mathematical
         url:    /math/mathematical-symbols.html
-  - title: Linear Algebra
+  - title: Linear Algebra(Khan Academy)
     children:
-      - title:  Start Linear Algebra
-        url:    /math/linear-algebra.html
+      - title:  Linear Algebra
+        url:    /math/linear-algebra-khan-academy.html
       - title:  Vectors
         url:    /math/vectors.html
       - title:  Linear combinations and spans
