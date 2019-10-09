@@ -52,16 +52,24 @@ confidence 레벨이 높다고 해서 무조건 정확하다는 것은 아니다
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/05/e.png?raw=true)
 
 10개중 7개가 제대로 검출되었다.
+
 precision = 옳게 검출된 얼굴 갯수 / 검출된 얼굴 갯수 = 7/10
+
 recall = 옭게 검출된 얼굴 갯수 / 실제 얼굴 갯수 = 7/15
+
+<br/>
 
 다음은 검출된 결과를 confidence 레벨에 따라 재정렬한다.
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/05/f.png?raw=true)
 
+<br/>
+
 confidence 레벨에 대한 threshold 값을 95%로 하면 하나만 검출한 것으로 판단할 것이고 이 때 precision = 1/1 = 1, recall = 1/15 = 0.067이 된다. threshold 값을 검출들의 confidence 레벨에 맞춰 낮춰가면 다음과 같이 precision과 recall이 계산된다.
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/05/g.png?raw=true)
+
+<br/>
 
 이 precision 값들과 recall값들을 아래와 같이 그래프로 나타내면 이것이 PR 곡선이다.
 
