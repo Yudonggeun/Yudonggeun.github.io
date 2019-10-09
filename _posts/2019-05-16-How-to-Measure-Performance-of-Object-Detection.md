@@ -19,23 +19,28 @@ IoU는 Bouning Box를 얼마나 잘 예측했는지를 측정한다. ground-trut
 보통 IoU가 0.5 이상이면 정답이라고 판단한다.
 
 ## Recall & Precision
-TP(True Positive): True를 True라고 판별.
-FP(False Positive): False를 True라고 판별
-TN(True Negative): True를 False라고 판별
-FN(False Negative): False를 False라고 판별
+ - TP(True Positive): True를 True라고 판별.
+ - FP(False Positive): False를 True라고 판별
+ - TN(True Negative): True를 False라고 판별
+ - FN(False Negative): False를 False라고 판별
 
 Recall은 검출률을 뜻한다. 얼마나 잘 잡아내는지를 나타낸다.
 
+<br/>
 
 recall = TP / (TP + FN)
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/05/c.png?raw=true)
+
+<br/>
 
 precision은 정확도를 말한다. 검출된 결과가 얼마나 정확한지를 나타낸다.
 
 precision = TP / (TP + FP)
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/05/d.png?raw=true)
+
+<br/>
 
 인식 알고리즘을 고정된 값으로 알고리즘의 성능을 평가하는 것은 잘못되었다. 왜냐하면 recall과 precision은 알고리즘의 파라미터 조절에 따라 유동적으로 변화는 값이기 때문이다. 일반적으로 알고리즘의 recall과 precision은 서로 반비례 관계를 가진다. 따라서 인식 알고리즘들의 성능을 제대로 비교하기 위해서는 precision과 recall의 전체 성능 변화를 살펴봐야 한다.
 
