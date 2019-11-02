@@ -4,17 +4,17 @@ tags: object-detection
 key: how-to-measure-performance-of-object-detection
 ---
 
-## 전문가를 위한 파이썬(내가 배운 것들)
+# 전문가를 위한 파이썬(내가 배운 것들)
 
-### Part 1
-#### Collections.namedtuple()
+## Part 1
+### Collections.namedtuple()
 튜플의 성질을 가지면서 이름으로 인덱스 접근 가능.
 
 ### Part 2
 #### __str__과 __repr__ 차이
 __str__은 비공식적(informal)인 문자열을 출력하고 __repr__은 공식적(official)인 문자열을 출력한다. 공통점은 문자열을 출력하는데 사용된다는 것이고, 차이점은 사용처가 다른 것이다.
 
-[[Python] __str__와 __repr__의 차이 살펴보기](https://shoark7.github.io/programming/python/difference-between-__repr__-vs-__str__)
+[Python __str__와 __repr__의 차이 살펴보기](https://shoark7.github.io/programming/python/difference-between-__repr__-vs-__str__)
 
 #### 내장 시퀀스 개요
 ##### 시퀀스형
@@ -224,3 +224,124 @@ from operator import mul
 def fact(n):
     return reduce(mul, range(1, n + 1))
 ~~~
+
+#### 함수 데커레이터와 클로저
+함수 데커레이터는 소스 코드에 있는 함수를 '표시'해서 함수의 작동을 개선할 수 있게 해준다. 강력한 기능이지만, 데커레이터를 자유자재로 사용하려면 먼저 클로저를 알아야 한다.
+
+##### 데커레이터 기본 지식
+데커레이터는 다른 함수를 인수로 받는 콜러블(데커레이트된 함수)이다. 데커레이터는 데커레이트된 함수에 어떤 처리를 수행하고, 함수를 반환하거나 함수를 다른 함수나 콜러블 객체로 대체한다.
+
+~~~
+@decorate
+def target():
+    print('running target()')
+~~~
+위 코드는 다음 코드와 동일하게 작동한다.
+~~~
+def target():
+    print('running target()')
+
+target = decorate(target)
+~~~
+
+다음 처럼 실행 시간을 측정할 수 있다.
+~~~
+import time
+
+def make_time_checker(func):
+    def new_func(*args, **kwargs):
+        start_time = time.perf_counter()
+        result = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        print("실행 시간: ", end_time - start_time)
+        return result
+    return new_func
+
+@make_time_checker
+def big_number(n):
+    return n ** n
+
+a = big_number(4)
+~~~
+
+##### 표준 라이브러리에서 제공하는 데커레이터
+###### functools.lru_cache()를 이용한 메모이제이션
+functools.lru_cache()는 실제로 쓸모가 많은 데커레이터로서, 메모이제이션을 구현한다. 메모이제이션은 이전에 실행한 값비싼 함수의 결과를 저장함으로써 이전에 사용된 인수에 대해 다시 계산할 필요가 없게 해준다. 이름 앞에 붙은 LRU는 'Least Reccently Used'(사용한지 가장 오래된)의 약자로서, 오랫동안 사용하지 않은 항목을 버림으러써 캐시가 무한정 커지지 않음을 의미한다.
+
+예시:
+
+~~~
+import functools
+from clockdeco import clock
+
+@clock
+@functools.lru_cache()
+def fibonacci(n):
+    if n < 2:
+        return n
+    return fibonacci(n - 2) + fibonacci(n - 1)
+
+if __name__ == '__main__':
+    print(fibonacci(6))
+~~~
+
+<br/>
+
+lru_cach()는 두 개의 선택적 인수를 이용해서 설정할 수 있다.
+~~~
+functools.lru_cache(maxsize=128, typed=False)
+~~~
+maxsize 인수는 얼마나 많은 호출을 저장할지를 결정한다. 캐시가 가득차면 가장 오래된 결과를 버리고 공간을 확보한다. 최적의 성능을 내기 위해 maxsize는 2의 제곱이 되어야 한다. typed 인수는 True로 설정되는 경우 인수의 자료형이 다르면 결과를 따로 저장한다.
+
+###### 매개변수화된 데커레이터
+소스 코드에서 데커레이터를 파싱할 때 파이썬은 데커레이트된 함수를 가져와서 데커레이터 함수의 첫 번째 인수로 넘겨준다. 인수를 받아 데커레이터를 반환하는 데커레이터 팩토리를 만들고 나서, 데커레이트될 함수에 데커레이터 팩토리를 적용하면 된다.
+
+~~~
+registry = set()
+
+def register(active=True):
+    def decorate(func):
+        print('running register(active=%s)->decorate(%s)' % (active, func))
+        if active:
+            registry.add(func)
+        else:
+            registry.discard(func)
+
+        return func
+    return decorate
+
+@register(active=False)
+def f1():
+    print('running f1()')
+
+@register()
+def f2():
+    print('running f2()')
+~~~
+
+f2() 함수만 registry에 남아 있다.
+
+##### 클로저
+클로저는 함수 본체에서 정의하지 않고 참조하는 비전역 변수를 포함한 확장 범위를 가진 함수다. 함수가 익명 함수인지 여부는 중요하지 않다. 함수 본체 외부에 정의된 비전역 변수에 접근할 수 있다는 것이 중요하다.
+
+
+2번째~7번째 줄: 클로저
+~~~
+def make_averager():
+    series = []
+
+    def averager(new value):
+        series.append(new_value)
+        total = sum(series)
+        return total/len(series)
+    return averager
+~~~
+
+### Part 4
+#### 객체 참조, 기변성, 재활용
+모든 객체는 정체성, 자료형, 값을 가지고 있다. 객체의 정체성은 일단 생성한 후에는 결코 변경되지 않는다. 정체성은 메모리 내의 객체 주소라고 생각할 수 있다. is 연산자는 두 객체의 정체성을 비교한다. id() 함수는 정체성을 나타내는 정수를 반환한다.
+
+##### == 연산자와 is 연산자 간의 선택
+== 연산자(동치 연산자)가 객체의 값을 비교하는 반면, is 연산자는 객체의 정체성을 비교한다.
+
+##### 튜플의 상대적 불변성
