@@ -35,6 +35,9 @@ Tooling/DepOps
 
 ## 공부
 
+### 기타
+- [전문가를 위한 파이썬(내가 배운 것들)](https://yudonggeun.github.io/2019/10/10/Fluent-Python-Book-Report.html)
+
 ### Deep Learning
 - [How to measure performance of object detection](https://yudonggeun.github.io/2019/05/16/How-to-Measure-Performance-of-Object-Detection.html)
 
