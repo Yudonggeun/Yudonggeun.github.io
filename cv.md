@@ -18,17 +18,12 @@ key: page-about
 - GitHub: [Github.com/Yudonggeun](https://github.com/yudonggeun)
 - Blog: [Donggeun](http://blog.donggeun.net)
 
-간략한 소개: 고등학교 1학년 때 처음으로 딥러닝을 접하였고 프로그래밍을 하면서 연구할 수 있다는 점에서 매력적이었습니다. 이후 계속해서 딥러닝을 공부하고 있습니다.
-
-**시간이 흐른다고 기술이 발전하지 않습니다.** 많은 이들이 기술을 발전시키기 위해 열심히 노력해야만 발전할 수 있습니다.
-저의 목표는 인류의 발전에 기여하는 것입니다.
-
 ## 보유기술
 
 Programming Language
 
 - Python3.x(중)
-- C(하)
+- C(중)
 
 Framework/Library
 
