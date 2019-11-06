@@ -16,7 +16,6 @@ key: page-about
 - 학력: 대덕소프트웨어마이스터고등학교
 - E-mail: ddonggeunn@gmail.com
 - GitHub: [Github.com/Yudonggeun](https://github.com/yudonggeun)
-- Blog: [Donggeun](http://blog.donggeun.net)
 
 ## 보유기술
 
@@ -41,34 +40,27 @@ Tooling/DepOps
 ### Deep Learning
 - [How to measure performance of object detection](https://yudonggeun.github.io/2019/05/16/How-to-Measure-Performance-of-Object-Detection.html)
 
+### 논문 공부
+
+| Title                                                        | Model Name   | Tag       | Published in |
+| ------------------------------------------------------------ | ------------ | --------- | ------------ |
+| [Rich feature hierarchies for accurate object detection and semantic segmentation](https://www.notion.so/yudonggeun/Rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation-346b2cbcc4f2488fa93fc1ecd40c91f0) | R-CNN        | Detection | CVPR'14      |
+| [Fast R-CNN](https://www.notion.so/yudonggeun/Fast-R-CNN-8fae5516aa354286b6246e50cc162088) | Fast R-CNN   | Detection | ICCV' 15     |
+| [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://www.notion.so/yudonggeun/Faster-R-CNN-Towards-Real-Time-Object-Detection-with-Region-Proposal-Networks-73e2010f7ef54de79a40abcbca53a178) | Faster R-CNN | Detection | NIPS' 15     |
+
+
+
 ### PyTorch
 
 - 설명: PyTorch 공식 튜토리얼 공부.
 - 기간: 2019.4.11~2019.4.23
 
-1. [PyTorch Summary](https://blog.donggeun.net/57)
-2. [PyTorch Tensors](https://blog.donggeun.net/58)
-3. [PyTorch autograd](https://blog.donggeun.net/59)
-4. [PyTorch Neural Network](https://blog.donggeun.net/60)
-5. [PyTorch 이미지 분류 만들기](https://blog.donggeun.net/61)
-6. [PyTorch Transfer Learning](https://blog.donggeun.net/62)
-
-### TensorFlow
-
-- 설명: Google의 TensorFlow Library 공부.
-- 기간: 2019.2.12~2019.3.18
-
-1. [인공지능, 머신러닝, 딥러닝 알아보기](https://blog.donggeun.net/44)
-2. [TensorFlow 소개](https://blog.donggeun.net/46)
-3. [TensorFlow 구조](https://blog.donggeun.net/47)
-4. [TensorFlow constant, Variable 알아보기](https://blog.donggeun.net/48)
-5. [TensorFlow분류(Classification), relu, Cross-Entropy](https://blog.donggeun.net/49)
-6. [TensorFlow 신경망 레이어 추가 Deep NN](https://blog.donggeun.net/50)
-7. [TensorFlow Word2Vec 살펴보기](https://blog.donggeun.net/51)
-8. [TensorFlow MNIST 분석 및 예제](https://blog.donggeun.net/52)
-9. [TensorFlow CNN(Convolutional Neural Network) 설명 및 예제](https://blog.donggeun.net/53)
-10. [TensorFlow GAN(Generative Adversarial Nets) 설명 및 예제](https://blog.donggeun.net/54)
-11. [TensorFlow RNN(Recurrent Neural Network) 설명 및 예제](https://blog.donggeun.net/55)
+1. [PyTorch Summary](https://yudonggeun.github.io/2019/04/11/PyTorch-Summary.html)
+2. [PyTorch Tensors](https://yudonggeun.github.io/2019/04/12/PyTorch-Tensors.html)
+3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
+4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
+5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
+6. [PyTorch Transfor Learning](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
 
 ### PySC2
 

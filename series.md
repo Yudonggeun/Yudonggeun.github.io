@@ -19,7 +19,7 @@ key: page-Series
 3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
 4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
 5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
-6. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
+6. [PyTorch Transfor Learning](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
 
 ### PySC2
 
