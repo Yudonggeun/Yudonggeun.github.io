@@ -40,6 +40,9 @@ Tooling/DepOps
 
 ## 공부
 
+### Deep Learning
+- [How to measure performance of object detection](https://yudonggeun.github.io/2019/05/16/How-to-Measure-Performance-of-Object-Detection.html)
+
 ### PyTorch
 
 - 설명: PyTorch 공식 튜토리얼 공부.
@@ -75,12 +78,13 @@ Tooling/DepOps
 - 기간: 2018.11.13~2018.12.13
 - GitHub: [PySC2-Tutorial](https://github.com/Yudonggeun/PySC2-Tutorial)
 
-1. [PyTorch Summary](https://yudonggeun.github.io/2019/04/11/PyTorch-Summary.html)
-2. [PyTorch Tensors](https://yudonggeun.github.io/2019/04/12/PyTorch-Tensors.html)
-3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
-4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
-5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
-6. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
+1. [스타크래프트 2 알아보기](https://yudonggeun.github.io/2018/11/13/start-starcraft2.html)
+2. [스타크래프트 2 강화학습 개발환경 설정](https://yudonggeun.github.io/2018/11/14/StarCraft2-Reinforcment-Learning-Development-Environment.html)
+3. [PySC2로 기본적인 Agent 만들기](https://yudonggeun.github.io/2018/11/15/Create-a-Basic-Agent-with-PySC2.html)
+4. [병영 건설과 해병 생산하고 공격하기](https://yudonggeun.github.io/2018/11/16/Controlling-the-Barracks-Controlling-your-Army.html)
+5. [PySC2 Q-Learning 적용하기](https://yudonggeun.github.io/2018/11/17/Application-of-PySC2-Q-Learning.html)
+6. [Observation 살펴보기](https://yudonggeun.github.io/2018/11/18/Observation-Review.html)
+7. [PySC2 Agent에 reward 사용하기](https://yudonggeun.github.io/2018/11/19/Use-Reward-in-PySC2-Agent.html)
 
 ## 프로젝트
 

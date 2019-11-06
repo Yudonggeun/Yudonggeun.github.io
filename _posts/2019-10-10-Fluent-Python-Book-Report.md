@@ -1,10 +1,11 @@
 ---
-title: How to measure performance of object detection
-tags: object-detection
-key: how-to-measure-performance-of-object-detection
+title: 전문가를 위한 파이썬(내가 배운 것들)
+tags: book-report
+key: fluent-python-book-report
 ---
 
 # 전문가를 위한 파이썬(내가 배운 것들)
+[전문가를 위한 파이썬](https://book.naver.com/bookdb/book_detail.nhn?bid=10910543)을 읽으며 새롭게 알게된 내용을 정리한 것입니다.
 
 ## Part 1
 ### Collections.namedtuple()
@@ -345,3 +346,142 @@ def make_averager():
 == 연산자(동치 연산자)가 객체의 값을 비교하는 반면, is 연산자는 객체의 정체성을 비교한다.
 
 #### 튜플의 상대적 불변성
+튜플 자체는 불변형이지만 참조된 항목은 변할 수 있다. 즉, 튜플의 불변성은 tuple 데이터 구조체의 물리적인 내용(참조 자체)만을 말하는 것이며, 참조된 객체까지 불변성을 가지는 것은 아니다.
+
+~~~
+t = (1, 2, [30, 40])
+t[-1].append(10)
+print(t)
+~~~
+
+Output:
+~~~
+(1, 2, [30, 40, 10])
+~~~
+
+### 기본 복사는 얕은 복사
+리스트나 대부분의 내장 가변 컬렉션을 복사하는 가장 손쉬운 방법은 그 자료형 자체의 내장 생성자를 사용하는 것이다.
+~~~
+>>> l1 = [1, 2, 3]
+>>> l2 = list(l1)
+>>> print(l1 == l2)
+True
+>>> l2 is l1
+False
+~~~
+
+#### 객체의 깊은 복사와 얕은 복사
+copy 모듈이 제공하는 deepcopy() 함수는 깊은 복사를, copy() 함수는 얕은 복사를 지원한다.
+~~~
+>>> import copy
+>>> bus1 = ["Alice", "Bill", "Claire"]
+>>> bus2 = copy.copy(bus1)
+>>> bus3 = copy.deepcopy(bus1)
+>>> id(bus1), id(bus2), id(bus3)
+(4301498296, 4301498296, 4301499752)
+~~~
+
+### del과 가비지 컬렉션
+del 명령은 이름을 제거하는 것이지. 객체를 제거하는 것이 아니다. del 명령의 결과로 객체가 가비지 컬렉트될 수 있지만, 제거된 변수가 객체를 참조하는 최후의 변수거나 객체에 도달할 수 없을 때만 가비지 컬렉트된다. 변수를 다시 바인딩해도 객체에 대한 참조 카운트를 0으로 만들어 객체가 제거될 수 있다.
+
+CPython의 경우 가비지 컬렉션은 주로 참조 카운트(reference count)에 기반한다. 본질적으로 각 객체는 얼마나 많은 참조가 자신을 가리키는지 개수(refcount)를 새고 있다. refcount가 0이 되자마자 CPython이 객체의 \_\_del__() 메서드를 호출하고(정의되어 있는 경우) 객체에 할당되어 있는 메모리를 해체함으로써 객체가 제거된다. CPython 2.0에는 순환 참조(그룹 안에서 서로 참조하고 있어서 참조 카운트는 0이 아니지만 도달할 수 없는 상태)에 관련된 객체 그룹을 탐지하기 위해 세대별 가비지 컬렉션 알고리즘(generational garbage collection algorithm)을 추가했다
+
+객체가 소멸될 때를 보여주기 위해 아래에서는 weakref.finalize()를 사용해서 객체가 소멸될 때 호출되는 콜백 함수를 등록한다.
+~~~
+>>> import weakref
+>>> s1 = {1, 2, 3}
+>>> s2 = s1
+>>> def bye():
+...     print('Gone with the wind...')
+...
+>>> ender = weakref.finalize(s1, bye)
+>>> ender.alive
+True
+>>> del s1
+>>> ender.alive
+True
+>>> s2 = 'spam'
+Gone with the wind...
+>>> ender.alive
+False
+~~~
+
+### 파이썬스러운 객체
+파이썬 데이터 모델 덕분에 사용자가 정의한 자료형도 내장 자료형과 마찬가지로 자연스럽게 동작할 수 있다. 상속하지 않고도 덕 타이핑 메커니즘을 통해 이 모든 것이 가능하다. 단지 객체에 필요한 메서드를 구현하면 기대한 대로 동작한다.
+
+#### 객체 표현
+- repr(): 객체를 개발자가 보고자 하는 형태로 표현한 문자열로 반환한다.
+- str(): 객체를 사용자가 보고자 하는 형태로 표현한 문자열로 반환한다.
+
+#### @classmethod와 @staticmethod
+##### classmethod
+- 클래스 메소드는 일반 메소드와 달리 인스턴스 생성없이 곧장 클래스를 통한 메소드 호출이 가능
+- 일반 메소드가 self를 넘기는 것처럼 클래스인cls를 넘겨줌
+- 인스턴스의 생성을 통해서도 메소드 호출이 가능
+
+##### staticmethod
+- 스태틱 메소드는 인스턴스 없이 호출이 가능하다는 점에서 @classmethod와 동일하나 cls를 넘겨주지 않아도 된다는 점에서는 차이를 보임
+- 인스턴스의 생성을 통해서도 메소드 호출이 가능
+
+#### \_\_slots__
+기본적으로 파이썬은 객체 속성을 각 객체 안의 \_\_dict__라는 딕셔너리형 속성에 저장한다. 딕셔너리는 빠른 접근 속도를 제공하기 위해 내부에 해시 테이블을 유지하므로 메모리 사용량 부담이 상당히 크다. 만약 속성이 몇개 없는 수백만 개의 객체를 다룬다면, \_\_slots__ 클래스 속성을 이용해서 메모리 사용량을 엄청나게 줄일 수 있다. \_\_slots__ 속성은 파이썬 인터프리터가 객체 속성을 딕셔너리 대신 튜플에 저장하게 만든다.
+
+### 인터페이스: 프로토콜에서 ABC까지
+#### 프로토콜
+프로토콜은 인터페이스지만 비공식적이다. 즉, 문서와 관례에 따라 정의되지만, 공식 인터페이스처럼 강제할 수 없다. 프로토콜은 특정 클래스에서 부분적으로 구현할 수 있으며, 이렇게 해도 문제가 없다.
+
+프로토콜 구현
+~~~
+class vector:
+    def __init__(self, x):
+        self.__x = float(x)
+
+    @property
+    def x(self):
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        self.__x = float(value)
+
+
+a = vector(1)
+print(a.x)
+a.x = 2
+print(a.x)
+~~~
+
+Output:
+~~~
+1.0
+2.0
+~~~
+
+#### 알렉스 마르텔리의 물새
+덕 타이핑은 객체의 실제 자료형은 무시하고,, 대신 객체가 용도에 맞는 메서드 이름, 시그니처, 의미를 구현하도록 보장하는 데 주안점을 둔다. 파이썬에서는 결국 자료형 검사를 위한 isinstance() 함수 사용의 회피를 의미한다. 
+
+덕 타이핑 구현:
+~~~
+class Parrot:
+    def fly(self):
+        print("Parrot flying")
+
+class Airplane:
+    def fly(self):
+        print("Airplane flying")
+
+class Whale:
+    def swim(self):
+        print("Whale swimming")
+
+def lift_off(entity):
+    entity.fly()
+
+parrot = Parrot()
+airplane = Airplane()
+whale = Whale()
+
+lift_off(parrot) # prints `Parrot flying`
+lift_off(airplane) # prints `Airplane flying`
+lift_off(whale) # Throws the error `'Whale' object has no attribute 'fly'`
+~~~
