@@ -69,7 +69,7 @@ Tooling/DepOps
 - GitHub: [PySC2-Tutorial](https://github.com/Yudonggeun/PySC2-Tutorial)
 
 1. [스타크래프트 2 알아보기](https://yudonggeun.github.io/2018/11/13/start-starcraft2.html)
-2. [스타크래프트 2 강화학습 개발환경 설정](https://yudonggeun.github.io/2018/11/14/StarCraft2-Reinforcment-Learning-Development-Environment.html)
+2. [스타크래프트 2 강화학습 개발환경 설정](https://yudonggeun.github.io/2018/11/14/StarCraft2-Reinforcment-Learning-Development-Environment.html)
 3. [PySC2로 기본적인 Agent 만들기](https://yudonggeun.github.io/2018/11/15/Create-a-Basic-Agent-with-PySC2.html)
 4. [병영 건설과 해병 생산하고 공격하기](https://yudonggeun.github.io/2018/11/16/Controlling-the-Barracks-Controlling-your-Army.html)
 5. [PySC2 Q-Learning 적용하기](https://yudonggeun.github.io/2018/11/17/Application-of-PySC2-Q-Learning.html)
