@@ -1,6 +1,6 @@
 ---
 title: Garbage Collection in Python
-tags: book-report
+tags: Python
 key: garbage-collection-in-python
 ---
 
