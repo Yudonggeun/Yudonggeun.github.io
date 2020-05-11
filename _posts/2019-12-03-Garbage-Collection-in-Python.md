@@ -1,5 +1,5 @@
 ---
-title: 전문가를 위한 파이썬(내가 배운 것들)
+title: Garbage Collection in Python
 tags: book-report
 key: garbage-collection-in-python
 ---
