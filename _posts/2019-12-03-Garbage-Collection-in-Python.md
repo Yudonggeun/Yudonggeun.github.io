@@ -4,7 +4,8 @@ tags: book-report
 key: garbage-collection-in-python
 ---
 
-![출처: https://stackify.com/python-garbage-collection/](http://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/12/a.jpg)
+![출처: https://stackify.com/python-garbage-collection/](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/12/a.jpg?raw=true)
+
 ## 서론
 ### GC(Garbage Collector)
 GC는 현대적인 언어에는 거의 필수로 존재하며 개발자의 생산성을 향상해준다. C#, JS, Python 등의 언어는 GC를 기본적으로 제공하며, C, C++과 같은 언어에서는 malloc(), free()와 같은 저수준의 메모리 관리 함수를 제공한다. (물론 C, C++에서도 GC를 library 형태로 사용할 수 있다. libgc) 실제로 현대적인 언어로 넘어오면서 개발자는 메모리를 직접 관리하는 코드를 거의 사용하지 않게 되었다.
@@ -107,7 +108,7 @@ generational garbage collector(세대별 가비지 컬렉터)와 이해해야 �
 두 번째 핵심 개념은 threshold(임계) 값이다. 각 세대마다 가비지 컬렉터 모듈에는 임계값 개수의 개체가 있습니다. 객체 수가 해당 임계값을 초과하면 가비지 콜렉션이 콜렉션 프로세스를 trigger(추적) 합니다. 해상 프로세스에서 살아남은 객체는 이전 세대로 옮겨진다.
 가비지 컬렉터는 내부적으로 generation(세대)과 threshold(임계값)로 가비지 컬렉션 주기와 객체를 관리한다. 세대는 0~2세대로 구분되고 최근 생성된 객체는 0세대(young)에 들어가고 오래된 객체일수록 2세대(old)로 이동한다. 당연히 한 객체는 단 하나의 세대에만 속한다. 가비지 컬렉터는 0세대일수록 더 자주 가비지 컬렉션을 하도록 설계되어있는데 generational hypothesis에 근거한다.
 
-![https://plumbr.io/handbook/garbage-collection-in-java/generational-hypothesis](http://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/12/b.png)
+![https://plumbr.io/handbook/garbage-collection-in-java/generational-hypothesis](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2019/12/b.png?raw=true)
 
 이 가설은 대부분은 어린 객체가 오래된 객체보다 해제될 가능성이 훨씬 높다는 가설이다.
 reference counting mechanism과 달리 Python 프로그램에서 세대 가비지 컬렉터의 동작을 변경할 수 있다. 여기에는 코드에서 garbage collection process를 trigger 하기 위한 changing the thresholds(임계값 변경), garbage collection process(가비지 컬렉션 프로세스)를 수동으로 trigger 하거나 garbage collection process(가비지 컬렉션 프로세스)를 모두 비활성화하는 것이 포함된다.
