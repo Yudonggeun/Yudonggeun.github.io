@@ -37,7 +37,7 @@ CPython에서의 메모리 관리와 Garbage Collection은 두 가지 측면이 
 ### CPython의 Reference Counting
 CPython에서의 주요 garbage collection mechanism은 reference counts 방식이다. Python에서 객체를 만들 때마다 기본 C 객체에서는 Python 유형(list, dict 또는 function)과 reference count가 생성된다.
 
-매우 기본적으로 Python 객체의 reference count는 객체가 참조될 대마다 증가하고 객체의 참조가 해제될 때 감소한다. 객체의 reference count가 0이 되면 객체의 메모리 할당이 해제된다.
+매우 기본적으로 Python 객체의 reference count는 객체가 참조될 때마다 증가하고 객체의 참조가 해제될 때 감소한다. 객체의 reference count가 0이 되면 객체의 메모리 할당이 해제된다.
 
 ### Python의 Reference Counting
 Python standard library의 sys 모듈을 사용하여 특정 객체의 reference counts(참조 횟수)를 확인할 수 있다. 참조 횟수를 증가시키는 방법은
