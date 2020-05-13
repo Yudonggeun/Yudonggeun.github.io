@@ -7,7 +7,7 @@ key: fluent-python-book-report
 ## Nvidia-Docker를 사용해야하는 이유
 Docker는 대부분의 기업이 서버를 배포하는 데 사용하고 서버 개발자는 필수적으로 공부해야 할 분야이다. 서버의 자동화 운영이 더 쉽기 때문이다. 만약 서버에 Deep Learning Framework가 사용된다면(GPU가 사용된다면) 환경 자체가 더욱 복잡해진다. GPU 사용을 위해 환경 구축을 해본 사람이라면 공감할 것이다. (Nvidia Driver + CUDA + CuDNN) 그리고 이 과정을 딥러닝 협업하는 곳에서는 개발 환경을 통일하기 위해 많은 시간을 보낼 것이다. 그래서 다른 개발자와 쉽게 개발 환경을 통일할 수 있는 가상화 기술인 Docker를 찾게 될 수밖에 없다.
 
-그러나 기본적으로 Docker를 통해 Container를 실행하면, GPU 자원을 사용할 수 없다... 개발 환경 문제를 해결하기 위해 Docker를 적용하려고 했지만 GPU를 지원하지 않는다는 황당한 상황이 발생한다. 그래서 Nvidia에서 직접 GPU 자원을 사용할 수 있는 Nvidia-Docker를 공개했다. ~~갓갓 Nvidia~~
+그러나 기본적으로 Docker를 통해 Container를 실행하면, GPU 자원을 사용할 수 없다... 개발 환경 문제를 해결하기 위해 Docker를 적용하려고 했지만 GPU를 지원하지 않는다는 황당한 상황이 발생한다. 그래서 Nvidia에서 직접 GPU 자원을 사용할 수 있는 Nvidia-Docker를 공개했다.
 
 ## Nvidia-Docker
 ### Nvidia-Docker Structure
