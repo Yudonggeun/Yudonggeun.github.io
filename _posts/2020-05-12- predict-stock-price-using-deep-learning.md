@@ -64,7 +64,8 @@ Input: 60일
 
 결과는 60일이 30일보다 더 좋은 성능을 보였다.
 
-### LSTM 사용 논문 분석
+
+### LSTM 적용 논문 분석
 주가 예측에 LSTM을 사용한 논문인 [Deep Learning for Stock Selection Based on High Frequency Price-Volume Data](https://arxiv.org/pdf/1911.02502.pdf)를 분석했다. 이 논문에서는 LSTM에서의 Optimizer, Dropout과 LSTM, CNN 성능을 비교하기 때문에 매우 유용하다.
 
 이 논문에서는 OHLC + Volume과 다양한 지표를 Input한다. 그리고 상승과 하락이 큰지 작은지를 구분하여 총 4가지의 Output을 받는다.
@@ -79,3 +80,16 @@ Optimizer는 Adam 계열보다는 RMSProp이 좋은 성능을 내는 것으로 �
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/h.PNG?raw=true)
 
+
+### CNN 적용 논문 분석
+CNN에 대한 성능을 보고 CNN을 적용한 논문을 찾아보았다. [Using Deep Learning Neural Networks and Candlestick Chart Representation to Predict Stock Market](https://arxiv.org/pdf/1903.12258.pdf) 무려 정확도가 92.1%이다. 지금까지 LSTM만 붙잡고 있었던 것이 후회된다. 성능을 검증하기 위해 구현하기로 했다. [GitHub](https://github.com/rosdyana/Going-Deeper-with-Convolutional-Neural-Network-for-Stock-Market-Prediction) 오픈소스가 있지만 Keras라 PyTorch로 재구성하였다.
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/i.PNG?raw=true)
+
+
+#### 성능 평가
+정말 똑같이 구현하고 테스트를 해봐도 정확도가 50~53% 밖에 나오질 않는다. 내가 실수한 부분이 있을까 하여 계속 찾아봐도 실수한 것은 없었다. 그래서 이 논문을 실제로 테스트 해본 사람이 있을까 검색해보았다.
+
+[딥러닝으로 캔들스틱 차트 이용해서 주식 예측 - 예제코드](https://dataplay.tistory.com/36)
+
+한 블로그만 나왔다. 이 블로그에서 직접 논문을 읽고 구현하여 Colab에서 테스트 해본 것으로 나오는데 이분도 loss가 떨어지지 않는다고 표현하였다. 이 때서야 이 논문이 가짜일 수도 있을거라고 생각했다.
