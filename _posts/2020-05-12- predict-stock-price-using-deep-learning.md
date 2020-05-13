@@ -30,7 +30,7 @@ Data는 [FinanceDataReader](https://github.com/FinanceData/FinanceDataReader) Li
 
 전일 대비 percent로 변환 후 MinMax를 취해 최종적으로 0~1 사이값이 되도록 했다.
 
-$$x_t = \in {{(x_{t} - x_{t-1}) * 100}}$$
+$$x_t = \ln \left \{ (x_{t} - x_{t-1}) * 100) \right \}$$
 
 ### 간단하게 LSTM을 적용해보자
 LSTM이 시계열에 최적화된 아키텍처니까 최소 정확도가 70%는 나오지 않을까 생각했다. 두 번째 LSTM은 Many-to-One이었고 마지막 Cell Output 값만 Linear에 들어갔다. 모델의 최종 Output은 t의 시가, 고가, 저가, 종가 대비 t+1의 시가, 고가, 저가, 종가 상승률을 예측한 값이다. 학습 데이터는 3종목의 2000-01-01 ~ 2020-04-01 데이터로 학습시켰으며 성능 테스트에서는 이 종목이 포함되지 않았다.
