@@ -12,7 +12,7 @@ key: page-about
 ## 소개
 
 - 이름: 유동근
-- 나이: 2002(만 18)
+- 나이: 2002.01.12 (만 18세)
 - 학력: 대덕소프트웨어마이스터고등학교
 - E-mail: ddonggeunn@gmail.com
 - GitHub: [Github.com/Yudonggeun](https://github.com/yudonggeun)
