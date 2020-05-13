@@ -20,6 +20,7 @@ $$h_t = f(h_t, x_t)$$
 EC2는 Ubuntu에 MySQL를 설치하였다.
 
 Data는 [FinanceDataReader](https://github.com/FinanceData/FinanceDataReader) Library를 사용하여 MySQL에 저장하였다. 데이터는 Date, Open(시가), High(고가), Low(저가), Close(종가), Volume(거래량)을 사용하기로 했다.
+
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/a.PNG?raw=true)
 
 ### 데이터 전처리
@@ -39,11 +40,12 @@ LSTM(hidden=512) -> LSTM(hidden=256) -> Linear(64) -> Linear(32) -> Lienar(4)
 #### 성능
 인터넷에 있는 주가 예측 결과를 어떻게 보면 잘 예측하는 것처럼 보일 수 있으나 직접 확대해서 보면 내일 값을 잘 추정하는게 아니라 오늘 값을 추정하는 듯 보였으며 선형적으로 optimize되기 때문에 loss를 낮추기 위해 단순히 전체적으로 추정하는 듯 보였다.
 
-![출처: http://investingdeeply.com/blog/predicting-stock-market-keras-tensorflow/](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/b.PNG?raw=true)
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/b.PNG?raw=true)
+출처: http://investingdeeply.com/blog/predicting-stock-market-keras-tensorflow/
 
 남은게 없어 인터넷에서 찾아온 자료지만 이처럼 결과가 나온다. 마치 내일 주가를 예측하는 것처럼 보이지만 수익률 테스트를 해보면 처참하다.
 
 #### 수익률 테스트
 수익률 테스트는 50종목의 내일 주가를 예측하여 가장 높은 상승률로 예측되는 주식의 실제 내일 주가를 곱한다. 아래 그래프는 직접 테스트하고 저장한 자료이며 파란색 선은 누적 수익률, 초록색 선은 50종목의 일별 평균 변화율을 나타낸다. 수익의 변화율이 매우 크며 30%까지 수익을 보고 바로 30%가 사라지는 성능을 보였다. 실제로 사용하기에는 무리가 있어보인다.
 
-![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/b.PNG?raw=true)
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/b.png?raw=true)
