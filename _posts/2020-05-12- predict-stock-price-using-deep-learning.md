@@ -48,4 +48,4 @@ LSTM(hidden=512) -> LSTM(hidden=256) -> Linear(64) -> Linear(32) -> Lienar(4)
 #### 수익률 테스트
 수익률 테스트는 50종목의 내일 주가를 예측하여 가장 높은 상승률로 예측되는 주식의 실제 내일 주가를 곱한다. 아래 그래프는 직접 테스트하고 저장한 자료이며 파란색 선은 누적 수익률, 초록색 선은 50종목의 일별 평균 변화율을 나타낸다. 수익의 변화율이 매우 크며 30%까지 수익을 보고 바로 30%가 사라지는 성능을 보였다. 실제로 사용하기에는 무리가 있어보인다.
 
-![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/C.png?raw=true)
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/c.png?raw=true)
