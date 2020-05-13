@@ -71,4 +71,11 @@ Input: 60일
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/f.PNG?raw=true)
 
+Optimizer는 Adam 계열보다는 RMSProp이 좋은 성능을 내는 것으로 보인다. 그리고 논문에서 DropOut을 사용하는 것이 더 좋다고 한다.
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/g.PNG?raw=true)
+
+이 논문에서 가장 중요한 점이 있는데 바로 CNN을 사용한 성능이다. 주가 예측에 관한 블로그에서도 CNN이 좋은 성능을 낸다는 글도 있었다. 그러나 나는 시계열 데이터인 주식이 LSTM보다 CNN에서 더 좋은 성능을 낸다는 것을 이해할 수 없었다. 그러나 이건 논문이니... 이 논문을 읽고 LSTM이 아닌 CNN을 적용해봐야 겠다고 판단했다.
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/h.PNG?raw=true)
 
