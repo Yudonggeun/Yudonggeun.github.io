@@ -1,6 +1,6 @@
 ---
 title: Predict Stock Price Using Deep Learning
-tags: Project, Deep Learning
+tags: Project DeepLearning
 key: predict-stock-price-using-deep-learning
 ---
 
