@@ -101,7 +101,7 @@ CNN에 대한 성능을 보고 CNN을 적용한 논문을 찾아보았다. [Usin
 ### 결과
 누적 수익은 LSTM > CNN 이고 LSTM은 1년에 수익률이 10~30%는 나오는 것 같았다. (수수료 계산 x) CNN이 LSTM보다 결과가 좋다는 평이 높은데 내 결과는 반대여서 좀 더 테스트 해볼 필요가 있을 것 같다.
 
-GitHub: https://github.com/Yudonggeun/Predict-Stock-Price-Using-Deep-Learning
+GitHub: [Predict-Stock-Price-Using-Deep-Learning](https://github.com/Yudonggeun/Predict-Stock-Price-Using-Deep-Learning)
 
 왜 주가 예측은 만만하지 않을까? 가장 큰 이유는 주가 변동성에는 과거 데이터 뿐만 아니라 뉴스, 공시, 시건 사고(선거, 북한) 등 주가에 영향을 주는 것들이 굉장히 많다는 것이다. 이를 극복하기 위해 NLP를 도입하는 방법도 있을 것이다. (실제로 Twitter 데이터를 이용하여 주가를 예측하는 논문도 있었다.) 두 번째는 단기간의 주가 변동은 랜덤이라는 것이다. 주식은 장기적인 방향성은 누구나 알 수 있다. 주식을 장기적으로 보유하라는 말은 무지에 대한 보호 때문일 것이다. 주식을 장기적으로 방향을 예측하는 것은 비교적 쉬우나 다음주나 바로 내일 어떻게 주가가 변동할 것인지는 거의 맞추기 어렵다.
 
