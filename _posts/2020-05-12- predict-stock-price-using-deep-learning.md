@@ -41,6 +41,7 @@ LSTM(hidden=512) -> LSTM(hidden=256) -> Linear(64) -> Linear(32) -> Lienar(4)
 인터넷에 있는 주가 예측 결과를 어떻게 보면 잘 예측하는 것처럼 보일 수 있으나 직접 확대해서 보면 내일 값을 잘 추정하는게 아니라 오늘 값을 추정하는 듯 보였으며 선형적으로 optimize되기 때문에 loss를 낮추기 위해 단순히 전체적으로 추정하는 듯 보였다.
 
 ![](http://investingdeeply.com/wp-content/uploads/2019/02/article_predictions_rs56vs.png)
+
 출처: http://investingdeeply.com/blog/predicting-stock-market-keras-tensorflow/
 
 남은게 없어 인터넷에서 찾아온 자료지만 이처럼 결과가 나왔다. 마치 내일 주가를 예측하는 것처럼 보이지만 수익률 테스트를 해보면 처참하다.
@@ -49,3 +50,25 @@ LSTM(hidden=512) -> LSTM(hidden=256) -> Linear(64) -> Linear(32) -> Lienar(4)
 수익률 테스트는 50종목의 내일 주가를 예측하여 가장 높은 상승률로 예측되는 주식의 실제 내일 주가를 곱한다. 아래 그래프는 직접 테스트하고 저장한 자료이며 파란색 선은 누적 수익률, 초록색 선은 50종목의 일별 평균 변화율을 나타낸다. 수익의 변화율이 매우 크며 30%까지 수익을 보고 바로 30%가 사라지는 성능을 보였다. 실제로 사용하기에는 무리가 있어보인다.
 
 ![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/c.png?raw=true)
+
+### LSTM Input Length
+LSTM에서 hidden size도 조절이 가능하지만 Input data의 Length도 변경 가능하다. 1 day = 1 cell 개념이다. 나는 30, 60 두 가지를 테스트 해봤다. 참고로 파란색이 누적 수익률이다.
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/e.png?raw=true)
+
+Input: 30일
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/d.png?raw=true)
+
+Input: 60일
+
+결과는 60일이 30일보다 더 좋은 성능을 보였다.
+
+### LSTM 사용 논문 분석
+주가 예측에 LSTM을 사용한 논문인 [Deep Learning for Stock Selection Based on High Frequency Price-Volume Data](https://arxiv.org/pdf/1911.02502.pdf)를 분석했다. 이 논문에서는 LSTM에서의 Optimizer, Dropout과 LSTM, CNN 성능을 비교하기 때문에 매우 유용하다.
+
+이 논문에서는 OHLC + Volume과 다양한 지표를 Input한다. 그리고 상승과 하락이 큰지 작은지를 구분하여 총 4가지의 Output을 받는다.
+
+![](https://github.com/Yudonggeun/yudonggeun.github.io/blob/master/images/2020/05/f.PNG?raw=true)
+
+
