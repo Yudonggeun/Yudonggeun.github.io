@@ -12,7 +12,7 @@ key: page-about
 ## 소개
 
 - 이름: 유동근
-- 나이: 2002(만 17)
+- 나이: 2002(만 18)
 - 학력: 대덕소프트웨어마이스터고등학교
 - E-mail: ddonggeunn@gmail.com
 - GitHub: [Github.com/Yudonggeun](https://github.com/yudonggeun)
@@ -22,22 +22,50 @@ key: page-about
 Programming Language
 
 - Python3.x(중)
-- C(중)
 
 Framework/Library
 
 - Python: PyTorch, NumPy
 
-Tooling/DepOps
+Tooling
 
 - GitHub, Slack
+
+## 프로젝트
+### Predict Stock Price Using Deep Learning
+
+- 요약: LSTM과 CNN을 사용하여 주가 예측 실험.
+- 기간: 2020.03.14~2020.05.12
+- 개발 인원: 1
+- 참여 비율: 100%
+- 보고서: [Predict Stock Price Using Deep Learning](https://yudonggeun.github.io/2020/05/12/predict-stock-price-using-deep-learning.html)
+- GitHub: [Predict Stock Price Using Deep Learning](https://github.com/Yudonggeun/Predict-Stock-Price-Using-Deep-Learning)
+
+### CCTV
+
+- 요약: raspberry pi를 사용하여 사람이 CCTV에 감지되면 자동으로 녹화되는 시스템.
+- 기간: 2019.06.12~2019.07.15
+- 개발 인원: 1
+- 참여 비율: 100%
+- GitHub: [HumanDetectionCCTV](https://github.com/Yudonggeun/HumanDetectionCCTV)
+
+### Face Recognition with CNN
+
+- 요약: 구글 사진 데이터를 활용하여 3명의 얼굴 인식 모델 구현.
+- 기간: 2018.07.15~2018.07.31
+- 개발 인원: 1
+- 참여 비율: 100%
+- GitHub: [Face_Recognition](https://github.com/Yudonggeun/FaceRecognitionWithCNN)
+
 
 ## 공부
 
 ### 기타
+- [Garbage Collection in Python](https://yudonggeun.github.io/2019/12/03/Garbage-Collection-in-Python.html)
 - [전문가를 위한 파이썬(내가 배운 것들)](https://yudonggeun.github.io/2019/10/10/Fluent-Python-Book-Report.html)
 
 ### Deep Learning
+- [CPU에서 Nvidia-Docker 테스트 하기](https://yudonggeun.github.io/2020/01/22/Test-Nvidia-Docker-Without-GPU.html)
 - [How to measure performance of object detection](https://yudonggeun.github.io/2019/05/16/How-to-Measure-Performance-of-Object-Detection.html)
 
 ### 논문 공부
@@ -48,19 +76,6 @@ Tooling/DepOps
 | [Fast R-CNN](https://www.notion.so/yudonggeun/Fast-R-CNN-8fae5516aa354286b6246e50cc162088) | Fast R-CNN   | Detection | ICCV' 15     |
 | [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://www.notion.so/yudonggeun/Faster-R-CNN-Towards-Real-Time-Object-Detection-with-Region-Proposal-Networks-73e2010f7ef54de79a40abcbca53a178) | Faster R-CNN | Detection | NIPS' 15     |
 
-
-
-### PyTorch
-
-- 설명: PyTorch 공식 튜토리얼 공부.
-- 기간: 2019.4.11~2019.4.23
-
-1. [PyTorch Summary](https://yudonggeun.github.io/2019/04/11/PyTorch-Summary.html)
-2. [PyTorch Tensors](https://yudonggeun.github.io/2019/04/12/PyTorch-Tensors.html)
-3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
-4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
-5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
-6. [PyTorch Transfor Learning](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
 
 ### PySC2
 
@@ -76,20 +91,15 @@ Tooling/DepOps
 6. [Observation 살펴보기](https://yudonggeun.github.io/2018/11/18/Observation-Review.html)
 7. [PySC2 Agent에 reward 사용하기](https://yudonggeun.github.io/2018/11/19/Use-Reward-in-PySC2-Agent.html)
 
-## 프로젝트
 
-### CCTV
+### PyTorch
 
-- 설명: raspberry pi를 사용하여 사람이 CCTV에 감지되면 자동으로 녹화되는 시스템.
-- 기간: 2019.6.12~2019.7.15
-- 개발 인원: 1
-- 참여 비율: 100%
-- GitHub: [HumanDetectionCCTV](https://github.com/Yudonggeun/HumanDetectionCCTV)
+- 설명: PyTorch 공식 튜토리얼 공부.
+- 기간: 2019.4.11~2019.4.23
 
-### Face Recognition with CNN
-
-- 설명: 구글 사진 데이터를 활용하여 3명의 얼굴 인식 모델 구현.
-- 기간: 2018.7.15~2018.7.31
-- 개발 인원: 1
-- 참여 비율: 100%
-- GitHub: [Face_Recognition](https://github.com/Yudonggeun/FaceRecognitionWithCNN)
+1. [PyTorch Summary](https://yudonggeun.github.io/2019/04/11/PyTorch-Summary.html)
+2. [PyTorch Tensors](https://yudonggeun.github.io/2019/04/12/PyTorch-Tensors.html)
+3. [PyTorch autograd](https://yudonggeun.github.io/2019/04/13/PyTorch-Autograd.html)
+4. [PyTorch Neural Network](https://yudonggeun.github.io/2019/04/14/PyTorch-Neural-Network.html)
+5. [PyTorch Image Classification](https://yudonggeun.github.io/2019/04/15/PyTorch-Image-Classification.html)
+6. [PyTorch Transfor Learning](https://yudonggeun.github.io/2019/04/16/PyTorch-Transfer-Learning.html)
